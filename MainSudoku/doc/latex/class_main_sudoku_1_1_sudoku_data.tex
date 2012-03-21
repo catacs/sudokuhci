@@ -1,0 +1,173 @@
+\hypertarget{class_main_sudoku_1_1_sudoku_data}{\section{Main\-Sudoku.\-Sudoku\-Data Class Reference}
+\label{class_main_sudoku_1_1_sudoku_data}\index{Main\-Sudoku.\-Sudoku\-Data@{Main\-Sudoku.\-Sudoku\-Data}}
+}
+
+
+This class has the sudoku internal data. This we store the Matrix of numbers and we compute algorithms to solve/check if the sudoku is solved.  
+
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_main_sudoku_1_1_sudoku_data_a59f80af2146149e1deed36b446cb8a78}{Sudoku\-Data} ()
+\begin{DoxyCompactList}\small\item\em Creates the sudoku data, but does not load a file. \end{DoxyCompactList}\item 
+void \hyperlink{class_main_sudoku_1_1_sudoku_data_ad69a26e1f28daa9e3a9108d2104a7d44}{load\-From\-File} (string filename)
+\begin{DoxyCompactList}\small\item\em Takes a filename, with a valid sudoku (check syntax), and loads the data information. \end{DoxyCompactList}\item 
+override string \hyperlink{class_main_sudoku_1_1_sudoku_data_a52ee7f326e8ccacf81cbaa6626d3670c}{To\-String} ()
+\begin{DoxyCompactList}\small\item\em Returns a well formated string with the data of the sudoku. \end{DoxyCompactList}\item 
+bool \hyperlink{class_main_sudoku_1_1_sudoku_data_a55506ecd0ed6ad1ffd31eca808497be0}{check\-Sudoku} ()
+\begin{DoxyCompactList}\small\item\em Checks if the sudoku has any inconsistence. \end{DoxyCompactList}\item 
+bool \hyperlink{class_main_sudoku_1_1_sudoku_data_a9914c0993f31fb5631edaf80a3ffcd85}{check\-Cell} (int x, int y)
+\begin{DoxyCompactList}\small\item\em Checks if a single cell of the sudoku is consistent. \end{DoxyCompactList}\item 
+bool \hyperlink{class_main_sudoku_1_1_sudoku_data_af4924fe976af0529461b24ab083eb563}{Complete} ()
+\begin{DoxyCompactList}\small\item\em Checks if all the cells are filled. Used to know. \end{DoxyCompactList}\item 
+bool \hyperlink{class_main_sudoku_1_1_sudoku_data_a86899533c4fa9ca01d15381dc12ec190}{Solve\-Sudoku} ()
+\begin{DoxyCompactList}\small\item\em Solves the Sudoku. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{class_main_sudoku_1_1_sudoku_data_ae66165c3bf221be092e0d4ea0b7f52f4}{this\mbox{[}introw, int col\mbox{]}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Accesor methods to the data Matrix. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This class has the sudoku internal data. This we store the Matrix of numbers and we compute algorithms to solve/check if the sudoku is solved. 
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_main_sudoku_1_1_sudoku_data_a59f80af2146149e1deed36b446cb8a78}{\index{Main\-Sudoku\-::\-Sudoku\-Data@{Main\-Sudoku\-::\-Sudoku\-Data}!Sudoku\-Data@{Sudoku\-Data}}
+\index{Sudoku\-Data@{Sudoku\-Data}!MainSudoku::SudokuData@{Main\-Sudoku\-::\-Sudoku\-Data}}
+\subsubsection[{Sudoku\-Data}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Main\-Sudoku.\-Sudoku\-Data.\-Sudoku\-Data} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_main_sudoku_1_1_sudoku_data_a59f80af2146149e1deed36b446cb8a78}
+
+
+Creates the sudoku data, but does not load a file. 
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_main_sudoku_1_1_sudoku_data_a9914c0993f31fb5631edaf80a3ffcd85}{\index{Main\-Sudoku\-::\-Sudoku\-Data@{Main\-Sudoku\-::\-Sudoku\-Data}!check\-Cell@{check\-Cell}}
+\index{check\-Cell@{check\-Cell}!MainSudoku::SudokuData@{Main\-Sudoku\-::\-Sudoku\-Data}}
+\subsubsection[{check\-Cell}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf Main\-Sudoku.\-Sudoku\-Data.\-check\-Cell} (
+\begin{DoxyParamCaption}
+\item[{int}]{x, }
+\item[{int}]{y}
+\end{DoxyParamCaption}
+)}}\label{class_main_sudoku_1_1_sudoku_data_a9914c0993f31fb5631edaf80a3ffcd85}
+
+
+Checks if a single cell of the sudoku is consistent. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & Row of the cell\\
+\hline
+{\em y} & \\
+\hline
+{\em M} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if the content of the cell is consistent
+\end{DoxyReturn}
+\hypertarget{class_main_sudoku_1_1_sudoku_data_a55506ecd0ed6ad1ffd31eca808497be0}{\index{Main\-Sudoku\-::\-Sudoku\-Data@{Main\-Sudoku\-::\-Sudoku\-Data}!check\-Sudoku@{check\-Sudoku}}
+\index{check\-Sudoku@{check\-Sudoku}!MainSudoku::SudokuData@{Main\-Sudoku\-::\-Sudoku\-Data}}
+\subsubsection[{check\-Sudoku}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf Main\-Sudoku.\-Sudoku\-Data.\-check\-Sudoku} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_main_sudoku_1_1_sudoku_data_a55506ecd0ed6ad1ffd31eca808497be0}
+
+
+Checks if the sudoku has any inconsistence. 
+
+\begin{DoxyReturn}{Returns}
+If the sudoku is stable\-: True; Else\-: False
+\end{DoxyReturn}
+\hypertarget{class_main_sudoku_1_1_sudoku_data_af4924fe976af0529461b24ab083eb563}{\index{Main\-Sudoku\-::\-Sudoku\-Data@{Main\-Sudoku\-::\-Sudoku\-Data}!Complete@{Complete}}
+\index{Complete@{Complete}!MainSudoku::SudokuData@{Main\-Sudoku\-::\-Sudoku\-Data}}
+\subsubsection[{Complete}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf Main\-Sudoku.\-Sudoku\-Data.\-Complete} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_main_sudoku_1_1_sudoku_data_af4924fe976af0529461b24ab083eb563}
+
+
+Checks if all the cells are filled. Used to know. 
+
+\begin{DoxyReturn}{Returns}
+If all the cels are file return True. Else returns False
+\end{DoxyReturn}
+\hypertarget{class_main_sudoku_1_1_sudoku_data_ad69a26e1f28daa9e3a9108d2104a7d44}{\index{Main\-Sudoku\-::\-Sudoku\-Data@{Main\-Sudoku\-::\-Sudoku\-Data}!load\-From\-File@{load\-From\-File}}
+\index{load\-From\-File@{load\-From\-File}!MainSudoku::SudokuData@{Main\-Sudoku\-::\-Sudoku\-Data}}
+\subsubsection[{load\-From\-File}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf Main\-Sudoku.\-Sudoku\-Data.\-load\-From\-File} (
+\begin{DoxyParamCaption}
+\item[{string}]{filename}
+\end{DoxyParamCaption}
+)}}\label{class_main_sudoku_1_1_sudoku_data_ad69a26e1f28daa9e3a9108d2104a7d44}
+
+
+Takes a filename, with a valid sudoku (check syntax), and loads the data information. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em filename} & Route to the file with the sudoku\\
+\hline
+\end{DoxyParams}
+\hypertarget{class_main_sudoku_1_1_sudoku_data_a86899533c4fa9ca01d15381dc12ec190}{\index{Main\-Sudoku\-::\-Sudoku\-Data@{Main\-Sudoku\-::\-Sudoku\-Data}!Solve\-Sudoku@{Solve\-Sudoku}}
+\index{Solve\-Sudoku@{Solve\-Sudoku}!MainSudoku::SudokuData@{Main\-Sudoku\-::\-Sudoku\-Data}}
+\subsubsection[{Solve\-Sudoku}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf Main\-Sudoku.\-Sudoku\-Data.\-Solve\-Sudoku} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_main_sudoku_1_1_sudoku_data_a86899533c4fa9ca01d15381dc12ec190}
+
+
+Solves the Sudoku. 
+
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\hypertarget{class_main_sudoku_1_1_sudoku_data_a52ee7f326e8ccacf81cbaa6626d3670c}{\index{Main\-Sudoku\-::\-Sudoku\-Data@{Main\-Sudoku\-::\-Sudoku\-Data}!To\-String@{To\-String}}
+\index{To\-String@{To\-String}!MainSudoku::SudokuData@{Main\-Sudoku\-::\-Sudoku\-Data}}
+\subsubsection[{To\-String}]{\setlength{\rightskip}{0pt plus 5cm}override string {\bf Main\-Sudoku.\-Sudoku\-Data.\-To\-String} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_main_sudoku_1_1_sudoku_data_a52ee7f326e8ccacf81cbaa6626d3670c}
+
+
+Returns a well formated string with the data of the sudoku. 
+
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+
+\subsection{Property Documentation}
+\hypertarget{class_main_sudoku_1_1_sudoku_data_ae66165c3bf221be092e0d4ea0b7f52f4}{\index{Main\-Sudoku\-::\-Sudoku\-Data@{Main\-Sudoku\-::\-Sudoku\-Data}!this\mbox{[}introw, int col\mbox{]}@{this[introw, int col]}}
+\index{this\mbox{[}introw, int col\mbox{]}@{this[introw, int col]}!MainSudoku::SudokuData@{Main\-Sudoku\-::\-Sudoku\-Data}}
+\subsubsection[{this[introw, int col]}]{\setlength{\rightskip}{0pt plus 5cm}int Main\-Sudoku.\-Sudoku\-Data.\-this\mbox{[}introw, int col\mbox{]}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}}}\label{class_main_sudoku_1_1_sudoku_data_ae66165c3bf221be092e0d4ea0b7f52f4}
+
+
+Accesor methods to the data Matrix. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em row} & Row of the number\\
+\hline
+{\em col} & Column of the number\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+Main\-Sudoku/Sudoku\-Data.\-cs\end{DoxyCompactItemize}

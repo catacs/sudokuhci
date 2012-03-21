@@ -1,0 +1,255 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>MainSudoku</name>
+    </assembly>
+    <members>
+        <member name="F:MainSudoku.MainSudokuForm.components">
+            <summary>
+            Variable del diseñador requerida.
+            </summary>
+        </member>
+        <member name="M:MainSudoku.MainSudokuForm.Dispose(System.Boolean)">
+            <summary>
+            Limpiar los recursos que se estén utilizando.
+            </summary>
+            <param name="disposing">true si los recursos administrados se deben eliminar; false en caso contrario, false.</param>
+        </member>
+        <member name="M:MainSudoku.MainSudokuForm.InitializeComponent">
+            <summary>
+            Método necesario para admitir el Diseñador. No se puede modificar
+            el contenido del método con el editor de código.
+            </summary>
+        </member>
+        <member name="F:MainSudoku.MainSudokuForm.currentPuzzle">
+            <summary>
+            Link to the sudoku data
+            </summary>
+        </member>
+        <member name="M:MainSudoku.MainSudokuForm.#ctor">
+            <summary>
+            Main Form of the application
+            </summary>
+        </member>
+        <member name="M:MainSudoku.MainSudokuForm.LoadSudoku_Click(System.Object,System.EventArgs)">
+            <summary>
+            Button event that open a sudoku file
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:MainSudoku.MainSudokuForm.checkButton_Click(System.Object,System.EventArgs)">
+            <summary>
+            Button that checks if the sudoku is complete
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:MainSudoku.MainSudokuForm.SolveButton_Click(System.Object,System.EventArgs)">
+            <summary>
+            Button that solves the sudoku
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="T:MainSudoku.Properties.Resources">
+            <summary>
+              Clase de recurso con establecimiento inflexible de tipos para buscar cadenas traducidas, etc.
+            </summary>
+        </member>
+        <member name="P:MainSudoku.Properties.Resources.ResourceManager">
+            <summary>
+              Devuelve la instancia ResourceManager almacenada en caché utilizada por esta clase.
+            </summary>
+        </member>
+        <member name="P:MainSudoku.Properties.Resources.Culture">
+            <summary>
+              Invalida la propiedad CurrentUICulture del subproceso actual para todas las
+              búsquedas de recursos usando esta clase de recursos con establecimiento inflexible de tipos.
+            </summary>
+        </member>
+        <member name="M:MainSudoku.Program.Main">
+            <summary>
+            Punto de entrada principal para la aplicación.
+            </summary>
+        </member>
+        <member name="T:MainSudoku.SudokuData">
+            <summary>
+            This class has the sudoku internal data. This we store the Matrix of numbers and we compute algorithms to solve/check if the sudoku is solved.
+            </summary>
+        </member>
+        <member name="F:MainSudoku.SudokuData.userMatrix">
+            <summary>
+             A Matrix, usually 9x9, that contains the information of the sudoku.
+            </summary>
+        </member>
+        <member name="F:MainSudoku.SudokuData.isFixed">
+            <summary>
+            Internal Matrix, that says if a number is fixed. There are the fixed numbers that have the sudoku at the very beginning.
+            </summary>
+        </member>
+        <member name="M:MainSudoku.SudokuData.#ctor">
+            <summary>
+            Creates the sudoku data, but does not load a file.
+            </summary>
+        </member>
+        <member name="M:MainSudoku.SudokuData.loadFromFile(System.String)">
+            <summary>
+            Takes a filename, with a valid sudoku (check syntax), and loads the data information
+            </summary>
+            <param name="filename">Route to the file with the sudoku</param>
+        </member>
+        <member name="M:MainSudoku.SudokuData.ToString">
+            <summary>
+            Returns a well formated string with the data of the sudoku
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:MainSudoku.SudokuData.checkSudoku">
+            <summary>
+            Checks if the sudoku has any inconsistence.
+            </summary>
+            <returns>If the sudoku is stable: True; Else: False</returns>
+        </member>
+        <member name="M:MainSudoku.SudokuData.checkCell(System.Int32,System.Int32)">
+            <summary>
+            Checks if a single cell of the sudoku is consistent
+            </summary>
+            <param name="x">Row of the cell</param>
+            <param name="y"></param>
+            <param name="M"></param>
+            <returns>True if the content of the cell is consistent</returns>
+        </member>
+        <member name="M:MainSudoku.SudokuData.Complete">
+            <summary>
+            Checks if all the cells are filled. Used to know
+            </summary>
+            <returns>If all the cels are file return True. Else returns False</returns>
+        </member>
+        <member name="M:MainSudoku.SudokuData.BacktrackSolve(System.Int32,System.Int32)">
+            <summary>
+            Backtracking algorithm that solves the sudoku.
+            </summary>
+            <param name="x">Row</param>
+            <param name="y">Column</param>
+            <returns>Return if is it posible to solve the sudoku</returns>
+        </member>
+        <member name="M:MainSudoku.SudokuData.SolveSudoku">
+            <summary>
+            Solves the Sudoku
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:MainSudoku.SudokuData.Item(System.Int32,System.Int32)">
+            <summary>
+            Accesor methods to the data Matrix
+            </summary>
+            <param name="row">Row of the number</param>
+            <param name="col">Column of the number</param>
+            <returns></returns>
+        </member>
+        <member name="F:MainSudoku.SudokuGrid.components">
+            <summary> 
+            Variable del diseñador requerida.
+            </summary>
+        </member>
+        <member name="M:MainSudoku.SudokuGrid.Dispose(System.Boolean)">
+            <summary> 
+            Limpiar los recursos que se estén utilizando.
+            </summary>
+            <param name="disposing">true si los recursos administrados se deben eliminar; false en caso contrario, false.</param>
+        </member>
+        <member name="M:MainSudoku.SudokuGrid.InitializeComponent">
+            <summary> 
+            Método necesario para admitir el Diseñador. No se puede modificar 
+            el contenido del método con el editor de código.
+            </summary>
+        </member>
+        <member name="F:MainSudoku.SudokuGrid.mySudoku">
+            <summary>
+            A link to the sudoku data
+            </summary>
+        </member>
+        <member name="F:MainSudoku.SudokuGrid.ctMatrix">
+            <summary>
+            Matrix with the controls
+            </summary>
+        </member>
+        <member name="M:MainSudoku.SudokuGrid.#ctor">
+            <summary>
+            Constructor of the sudoku grid. This not draw any cell.
+            </summary>
+        </member>
+        <member name="M:MainSudoku.SudokuGrid.generateControls(MainSudoku.SudokuData)">
+            <summary>
+             Arrange the buttons in a grid on the form
+            </summary>
+            <param name="sudoku">Sudoku Object with data</param>
+        </member>
+        <member name="M:MainSudoku.SudokuGrid.WriteNumbers">
+            <summary>
+            Method that draw the numbers of the Matrix data into the controls
+            </summary>
+        </member>
+        <member name="M:MainSudoku.SudokuGrid.CellText_Gesture(System.Object,Microsoft.Ink.InkEditGestureEventArgs)">
+            <summary>
+            Event that detect gestures on the sudoku cell control
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:MainSudoku.SudokuGrid.CellText_Recognize(System.Object,Microsoft.Ink.InkEditRecognitionEventArgs)">
+            <summary>
+            Event that are launched when text is recognized
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:MainSudoku.SudokuGrid.CellText_TextChanged(System.Object,System.EventArgs)">
+            <summary>
+            Event that is launched when the text of the cell is changed
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="T:MainSudoku.SudokuGrid.CellTextBox">
+            <summary>
+            InkEdit Modified control for the Sudoku Control
+            </summary>
+        </member>
+        <member name="F:MainSudoku.SudokuGrid.CellTextBox._row">
+            <summary>
+            We store the row information of the control
+            </summary>
+        </member>
+        <member name="F:MainSudoku.SudokuGrid.CellTextBox._col">
+            <summary>
+            We store the column information of the control
+            </summary>
+        </member>
+        <member name="M:MainSudoku.SudokuGrid.CellTextBox.#ctor(System.Int32,System.Int32,System.Int32)">
+            <summary>
+            Constructor of the control
+            </summary>
+            <param name="r"></param>
+            <param name="c"></param>
+            <param name="height"></param>
+        </member>
+        <member name="M:MainSudoku.SudokuGrid.CellTextBox.OnRecognition(Microsoft.Ink.InkEditRecognitionEventArgs)">
+            <summary>
+            Recognition Event
+            </summary>
+            <param name="e"></param>
+        </member>
+        <member name="P:MainSudoku.SudokuGrid.CellTextBox.row">
+            <summary>
+            Accesor to the row of the control
+            </summary>
+        </member>
+        <member name="P:MainSudoku.SudokuGrid.CellTextBox.col">
+            <summary>
+            Accesor to the column of the control
+            </summary>
+        </member>
+    </members>
+</doc>

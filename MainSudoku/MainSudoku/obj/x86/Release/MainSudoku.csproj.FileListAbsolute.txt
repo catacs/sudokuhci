@@ -1,0 +1,10 @@
+C:\Documents and Settings\Javier\Desktop\MainSudoku\MainSudoku\bin\Release\Sudokus\sudoku1.txt
+C:\Documents and Settings\Javier\Desktop\MainSudoku\MainSudoku\bin\Release\MainSudoku.exe
+C:\Documents and Settings\Javier\Desktop\MainSudoku\MainSudoku\bin\Release\MainSudoku.pdb
+C:\Documents and Settings\Javier\Desktop\MainSudoku\MainSudoku\obj\x86\Release\ResolveAssemblyReference.cache
+C:\Documents and Settings\Javier\Desktop\MainSudoku\MainSudoku\obj\x86\Release\MainSudoku.MainSudokuForm.resources
+C:\Documents and Settings\Javier\Desktop\MainSudoku\MainSudoku\obj\x86\Release\MainSudoku.Properties.Resources.resources
+C:\Documents and Settings\Javier\Desktop\MainSudoku\MainSudoku\obj\x86\Release\MainSudoku.SudokuGrid.resources
+C:\Documents and Settings\Javier\Desktop\MainSudoku\MainSudoku\obj\x86\Release\MainSudoku.csproj.GenerateResource.Cache
+C:\Documents and Settings\Javier\Desktop\MainSudoku\MainSudoku\obj\x86\Release\MainSudoku.exe
+C:\Documents and Settings\Javier\Desktop\MainSudoku\MainSudoku\obj\x86\Release\MainSudoku.pdb
